@@ -1,0 +1,53 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.banner {
+  background-image: url(./../img/banner.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: left;
+  background-position: center;
+  margin-top: 50px;
+  padding: 20px 20px 50px;
+}
+.banner .banner_title {
+  margin: 20px 0 55px;
+}
+.banner .banner_title a {
+  text-align: left;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 300;
+  color: black;
+  transition: all 0.3s;
+}
+.banner .banner_title a:hover {
+  text-decoration: underline;
+}
+.banner h1 {
+  font-size: 40px;
+  font-weight: 600;
+  color: black;
+}
+
+.register h2 {
+  text-transform: uppercase;
+  text-align: center;
+  margin: 20px auto;
+  font-size: 25px;
+  font-weight: 700;
+  color: black;
+}/*# sourceMappingURL=register.css.map */

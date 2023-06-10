@@ -1,0 +1,150 @@
+// Reset
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+// color
+$color-primary: #000b15;
+$color-secondary: #ababab;
+$color-white: #ffffff;
+$color-red: rgb(177, 17, 17);
+$color-black: black;
+$color-lowpink: #f0f0f0;
+$color-cooler: #d8c6b4;
+$color-header: #f4f4f4;
+$color-footer: rgb(255 255 255 / 50%);
+$color-ten: #00c3d7;
+
+// font-weight
+$fw-thin: 300;
+$fw-normal: 400;
+$fw-medium: 500;
+$fw-semibold: 600;
+$fw-bold: 700;
+
+// font-size
+$fs-1: 12px;
+$fs-2: 14px;
+$fs-3: 20px;
+$fs-4: 30px;
+$fs-5: 80px;
+
+// spacing
+$spacer: 1rem;
+
+@mixin styleText($fs: 18px, $fw, $color) {
+    font-size: $fs;
+    font-weight: $fw;
+    color: $color;
+  }
+
+footer {
+    margin-top: 20px;
+    .footer_top {
+      .top {
+        border: 1px solid #e0e0e0;
+        padding: 35px;
+        text-align: center;
+        h4 {
+          @include styleText($fs-2, $fw-medium, $color-black);
+        }
+        a {
+          text-decoration: none;
+          transition: all 0.5s;
+          color: $color-black;
+          i {
+            margin: 20px 5px;
+            font-size: $fs-2;
+          }
+          &:hover {
+            color: $color-red;
+          }
+        }
+        p {
+          @include styleText(13px, $fw-thin, $color-black);
+        }
+      }
+    }
+    .footer_middle {
+      margin: 20px 0;
+      .middle {
+        margin-bottom: 20px;
+        // border: 1px solid #e0e0e0;
+        text-align: left;
+        a {
+          transition: all 0.5s;
+          text-decoration: none;
+          color: $color-black;
+          @include styleText(13px, $fw-normal, $color-black);
+          &:hover {
+            color: $color-red;
+            text-decoration: underline;
+          }
+        }
+        h5 {
+          @include styleText($fs-1, $fw-medium, $color-black);
+        }
+        p {
+          @include styleText(13px, $fw-thin, $color-black);
+        }
+        .content_item {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+  
+          .item {
+            padding: 5px 5px;
+            border: 1px solid #e0e0e0;
+            transition: all 0.6s;
+            text-align: center;
+            &:hover {
+              background-color: $color-black;
+              a {
+                i {
+                  color: $color-white;
+                }
+              }
+            }
+          }
+        }
+      }
+      .input-group {
+        // padding: 10px 5px;
+        .form-control {
+          border-radius: 0;
+        }
+        button {
+          border-radius: 0;
+          padding: 0 20px;
+        }
+      }
+    }
+    .footer_bottom {
+      background-color: $color-black;
+      color: $color-footer;
+      .col-6 {
+        .countryside {
+          background-image: url(./../img/logo\ vietnam.png);
+          background-size: contain;
+          background-repeat: no-repeat;
+          padding: 10px;
+        }
+        a {
+          margin-right: 15px;
+          transition: all 0.5s;
+          text-decoration: none;
+          @include styleText(13px, $fw-normal, $color-footer);
+          &:hover {
+            color: $color-white;
+            text-decoration: underline;
+          }
+        }
+        p {
+          margin-bottom: 0;
+          @include styleText(13px, $fw-normal, $color-footer);
+        }
+      }
+    }
+  }

@@ -1,0 +1,117 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+footer {
+  margin-top: 20px;
+}
+footer .footer_top .top {
+  border: 1px solid #e0e0e0;
+  padding: 35px;
+  text-align: center;
+}
+footer .footer_top .top h4 {
+  font-size: 14px;
+  font-weight: 500;
+  color: black;
+}
+footer .footer_top .top a {
+  text-decoration: none;
+  transition: all 0.5s;
+  color: black;
+}
+footer .footer_top .top a i {
+  margin: 20px 5px;
+  font-size: 14px;
+}
+footer .footer_top .top a:hover {
+  color: rgb(177, 17, 17);
+}
+footer .footer_top .top p {
+  font-size: 13px;
+  font-weight: 300;
+  color: black;
+}
+footer .footer_middle {
+  margin: 20px 0;
+}
+footer .footer_middle .middle {
+  margin-bottom: 20px;
+  text-align: left;
+}
+footer .footer_middle .middle a {
+  transition: all 0.5s;
+  text-decoration: none;
+  color: black;
+  font-size: 13px;
+  font-weight: 400;
+  color: black;
+}
+footer .footer_middle .middle a:hover {
+  color: rgb(177, 17, 17);
+  text-decoration: underline;
+}
+footer .footer_middle .middle h5 {
+  font-size: 12px;
+  font-weight: 500;
+  color: black;
+}
+footer .footer_middle .middle p {
+  font-size: 13px;
+  font-weight: 300;
+  color: black;
+}
+footer .footer_middle .middle .content_item {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+footer .footer_middle .middle .content_item .item {
+  padding: 5px 5px;
+  border: 1px solid #e0e0e0;
+  transition: all 0.6s;
+  text-align: center;
+}
+footer .footer_middle .middle .content_item .item:hover {
+  background-color: black;
+}
+footer .footer_middle .middle .content_item .item:hover a i {
+  color: #ffffff;
+}
+footer .footer_middle .input-group .form-control {
+  border-radius: 0;
+}
+footer .footer_middle .input-group button {
+  border-radius: 0;
+  padding: 0 20px;
+}
+footer .footer_bottom {
+  background-color: black;
+  color: rgba(255, 255, 255, 0.5);
+}
+footer .footer_bottom .col-6 .countryside {
+  background-image: url(./../img/logo\ vietnam.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 10px;
+}
+footer .footer_bottom .col-6 a {
+  margin-right: 15px;
+  transition: all 0.5s;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.5);
+}
+footer .footer_bottom .col-6 a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+footer .footer_bottom .col-6 p {
+  margin-bottom: 0;
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.5);
+}/*# sourceMappingURL=footer.css.map */
