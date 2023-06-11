@@ -12,7 +12,7 @@ function renderDisplay(productList) {
  
     let bannerHtml = '';
     productList.content.forEach(product => {
-        bannerHtml += `<button class="btn btn-light btn-outline-dark" onclick="moveToCategoryList('${product.id}')"> 
+        bannerHtml += `<button class="btn btn-light" onclick="moveToCategoryList('${product.id}')"> 
         Shop ${product.id}
         </button>`
     })

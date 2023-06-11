@@ -136,23 +136,6 @@
         <!-- Infor side -->
         <div class="detail_product col-xl-4 col-sm-4 col-md-12">
             <div class="product_content">
-                <!-- <h3>Run Star Legacy CX Platform DIY Beads</h3>
-                <p class="product_price">€ 130,00</p>
-                <p class="product_cat">WOMEN'S HIGH TOP SHOE</p>
-                <div class="product_rate">
-                    <a href="">
-                        <span class="rate_star">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                        </span>
-                        4 Stars
-                    </a>     
-                </div>
-                <p class="product_desc">The always-bold and comfortable platform gets a nostalgic update with embroidered butterflies and DIY alphabet beads to dress up your laces.
-                    <a href="#">More Info</a></p> -->
             </div>
 
             <div class="product_color">
@@ -179,16 +162,6 @@
                     <option value="" selected disabled>
                         Pick a Size
                     </option>
-                    <!-- <option value="1">EU 35</option>
-                    <option value="2">EU 36</option>
-                    <option value="3">EU 37</option>
-                    <option value="4">EU 39</option>
-                    <option value="5">EU 40</option>
-                    <option value="6">EU 41</option>
-                    <option value="7">EU 42</option>
-                    <option value="8">EU 43</option>
-                    <option value="9">EU 44</option>
-                    <option value="10">EU 45</option> -->
                 </select>
             </div>
 
@@ -215,8 +188,9 @@
 
             <div class="product_signup">
                 Be the first to hear about product launches, collaborations, and more. 
-                <a href="#">Sign up</a>
-            </div>
+                <a data-toggle="modal" data-target="#signupModal">
+                    Sign Up
+                  </a>
         </div>
 
     </section>
@@ -233,33 +207,121 @@
         </div>
         <div class="rec_list"></div>
     </section>
-
-    <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-    Launch demo modal
-  </button>
   
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+<!-- Modal -->
+<div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content " style=" border-radius:0">
+            <header class="head-form mb-0">
+                <h2 id="header-title" class="py-2 ps-4"
+                    style="font-size:larger ; text-decoration: underline;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                    Sign up</h2>
+   
+                <h3 id="header-title" class="py-1 ps-4"
+                    style="font-size:large; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                    Almost there.</h3>
+   
+            </header>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <form role="form">                       
+                    <!-- email -->
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+                            </div>
+                            <input type="email" name="email" id="email" class="form-control input-sm"
+                                placeholder="Email">
+                        </div>
+   
+                        <span class="sp-info" id="notifyEmail"></span>
+                    </div>
+                    <!-- name -->
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-address-book"></i></span>
+                            </div>
+                            <input type="name" name="name" id="name" class="form-control input-sm"
+                                placeholder="Name">
+                        </div>
+                        <span class="sp-info" id="notifyName"></span>
+                    </div>
+                    <!-- number phone -->
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa-solid fa-phone"></i></span>
+                            </div>
+                            <input type="phone" name="phone" id="phone" class="form-control input-sm"
+                                placeholder="Number phone">
+                        </div>
+                        <span class="sp-info" id="notifyNumberPhone"></span>
+                    </div>
+                    <!-- GENDER  -->
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa-solid fa-transgender"></i></span>
+                            </div>
+                            <select class="form-control" id="chucvu">
+                                <option value="">Gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Do not specify">Do not specify</option>
+                            </select>
+                        </div>
+   
+                        <span class="sp-info" id="notifyGender"></span>
+                    </div>
+                    <!-- PASSWORD  -->
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-key"></i></span>
+                            </div>
+                            <input type="password" name="password" id="password" class="form-control input-sm"
+                                placeholder="Password">
+                        </div>
+                        <div class="screen">
+                            <p class=" font-italic"
+                                style="font-size: 12px; font-weight: 200; padding:10px 0 10px 20px ;">8 characters
+                                minimum
+                                <br>One number
+                                <br>At least 1 special character(s) - [$%/(){}=?!.,-_*+~#]
+                                <br>One lowercase character
+                                <br>One uppercase character
+                            </p>
+                        </div>
+                        <span class="sp-info" id="notifyPassWord"></span>
+                    </div>
+                    <!-- CONFIRM PASSWORD  -->
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-key"></i></span>
+                            </div>
+                            <input type="password" name="password" id="password" class="form-control input-sm"
+                                placeholder="Confirm password">
+                        </div>
+                        <span class="sp-info" id="notifyConfirm"></span>
+                    </div>
+   
+   
+                </form>
+            </div>
+            <!-- Modal footer -->
+            <div class="modal-footer align-items-center text-center" id="modal-footer">
+                <button id="btnAddMember" type="button" class="btn btn-outline-dark"
+                    style="border-radius: 0; padding: 5px 40px;">Sign Up</button>
+               <button id="btnClose" type="button" class="btn btn-outline-danger"
+               data-dismiss="modal">Close</button>
+            </div>
         </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
     </div>
   </div>
-    <signup-component></signup-component>
 
     <footer-component></footer-component>
 

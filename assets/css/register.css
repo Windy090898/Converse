@@ -14,40 +14,13 @@ img {
   margin: 0 auto;
 }
 
-.banner {
-  background-image: url(./../img/banner.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  text-align: left;
-  background-position: center;
-  margin-top: 50px;
-  padding: 20px 20px 50px;
+.form-group.invalid [name] {
+  border-color: rgb(177, 17, 17);
 }
-.banner .banner_title {
-  margin: 20px 0 55px;
+.form-group.invalid .sp-info {
+  color: rgb(177, 17, 17);
 }
-.banner .banner_title a {
-  text-align: left;
+.form-group.invalid #btnClose a {
   text-decoration: none;
-  font-size: 16px;
-  font-weight: 300;
-  color: black;
-  transition: all 0.3s;
-}
-.banner .banner_title a:hover {
-  text-decoration: underline;
-}
-.banner h1 {
-  font-size: 40px;
-  font-weight: 600;
-  color: black;
-}
-
-.register h2 {
-  text-transform: uppercase;
-  text-align: center;
-  margin: 20px auto;
-  font-size: 25px;
-  font-weight: 700;
   color: black;
 }/*# sourceMappingURL=register.css.map */

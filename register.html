@@ -25,47 +25,128 @@
     <link rel="stylesheet" href="./assets/css/register.css">
     <!-- fancybox  -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
-
-    <script src="./components/header.js" type="text/javascript" defer></script>
-    <script src="./components/footer.js" type="text/javascript" defer></script>
 </head>
 
-<body style="overflow-x:hidden">
-    <!-- part 1 -->
-    <header-component></header-component>
-
-    <section class="banner">
-        <!-- <div class="container"> -->
-        <div class="banner_title">
-            <a href="./index.html">Home/</a>
-            <a href="./index.html">Flash Sale/</a>
-            <a href="./index.html">All</a>
+<body style="overflow-x:hidden" class="modal-open">
+ 
+  <!-- Modal -->
+  <div class="modal fade show" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="display: block;">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content " style=" border-radius:0">
+            <header class="head-form mb-0">
+                <h2 id="header-title" class="py-2 ps-4"
+                    style="font-size:larger ; text-decoration: underline;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                    Sign up</h2>
+   
+                <h3 id="header-title" class="py-1 ps-4"
+                    style="font-size:large; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                    Almost there.</h3>
+   
+            </header>
+   
+            <!-- Modal body -->
+            <div class="modal-body">
+                <form role="form" id="signupForm">                       
+                    <!-- email -->
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+                            </div>
+                            <input type="email" name="email" rule="required|email" id="email" class="form-control input-sm"
+                                placeholder="Email">
+                        </div>
+   
+                        <span class="sp-info" id="notifyEmail"></span>
+                    </div>
+                    <!-- name -->
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-address-book"></i></span>
+                            </div>
+                            <input type="name" name="name" rule="required|name" id="name" class="form-control input-sm"
+                                placeholder="Name">
+                        </div>
+                        <span class="sp-info" id="notifyName"></span>
+                    </div>
+                    <!-- number phone -->
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa-solid fa-phone"></i></span>
+                            </div>
+                            <input type="phone" name="phone" rule="required|number" id="phone" class="form-control input-sm"
+                                placeholder="Number phone">
+                        </div>
+                        <span class="sp-info" id="notifyNumberPhone"></span>
+                    </div>
+                    <!-- GENDER  -->
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa-solid fa-transgender"></i></span>
+                            </div>
+                            <select class="form-control" name="chucvu" rule="required" id="chucvu">
+                                <option value="" selected disabled>Gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Do not specify">Do not specify</option>
+                            </select>
+                        </div>
+   
+                        <span class="sp-info" id="notifyGender"></span>
+                    </div>
+                    <!-- PASSWORD  -->
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-key"></i></span>
+                            </div>
+                            <input type="password" name="password" rule="required|password" id="password" class="form-control input-sm"
+                                placeholder="Password">
+                        </div>
+                        <div class="screen">
+                            <p class=" font-italic"
+                                style="font-size: 12px; font-weight: 200; padding:10px 0 10px 20px ;">8 characters
+                                minimum
+                                <br>One number
+                                <br>At least 1 special character(s) - [$%/(){}=?!.,-_*+~#]
+                                <br>One lowercase character
+                                <br>One uppercase character
+                            </p>
+                        </div>
+                        <span class="sp-info" id="notifyPassWord"></span>
+                    </div>
+                    <!-- CONFIRM PASSWORD  -->
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-key"></i></span>
+                            </div>
+                            <input type="password" name="confirmedPassword" rule="required|confirmed:#password" id="confirmedPassword" class="form-control input-sm"
+                                placeholder="Confirm password">
+                        </div>
+                        <span class="sp-info" id="notifyConfirm"></span>
+                    </div>
+                    
+                            <!-- Modal footer -->
+                    <div class="modal-footer align-items-center text-center" id="modal-footer">
+                        <!-- <button id="btnAddMember" type="button" class="form-submit btn btn-outline-dark"
+                            style="border-radius: 0; padding: 5px 40px;">Sign Up</button> -->
+                            <input type="submit" value="Submit" class="btn btn-outline-dark">
+                    <button id="btnClose" type="button" class="btn btn-outline-danger"
+                    data-dismiss="modal">Close</button>
+                    </div>
+   
+                </form>
+            </div>
+            
         </div>
-        <!-- </div> -->
-    </section>
-    <section class="register">
-        <h2>Infomation registion list</h2>
-        <div class="col-8 mx-auto">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Email</th>
-                        <th>Name</th>
-                        <th>Number phone</th>
-                        <th>Gender</th>
-                        <th>Password</th>
-                        <th>Comfirm password</th>
-                    </tr>
-                </thead>
-                <tbody id="tbodyUser"></tbody>
-            </table>
-        </div>
-    </section>
+    </div>
+  </div>
+  <div class="modal-backdrop fade show"></div>
 
-
-  
-
-<footer-component></footer-component>
     <script src="./js/jquery.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/helper.js"></script>
@@ -78,16 +159,38 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
         integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
         </script>
+
+    <script src="./js/validator2.js"></script>
+
     <script>
-        $(window).on("scroll", function () {
-            var scroll = $(window).scrollTop();
-            if (scroll >= 30) {
-                $("#site-header").addClass("nav-fixed");
-            } else {
-                $("#site-header").removeClass("nav-fixed");
+        Validator('#signupForm', {
+          onSubmit: function(user) {
+            var userAPI = 'https://shop.cyberlearn.vn/api/Users/signup';
+            createUser(user)
+            localStorage.setItem('userSignup', JSON.stringify(user));
+            window.location.href = './index.html'
+
+            function createUser(user) {
+                var options = {
+                    method: "POST", // *GET, POST, PUT, DELETE, etc.
+                    headers: {
+                    "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(user), // body user type must match "Content-Type" header
+                }
+                fetch(userAPI, options)
+                    .then((response) => response.json())
+                    .then((user) => console.log(user))
             }
-        });
+            
+          }
+        })
+
+        document.getElementById('btnClose').onclick = function() {
+            window.location.href = './index.html'
+        }
     </script>
+
 </body>
 
 </html>

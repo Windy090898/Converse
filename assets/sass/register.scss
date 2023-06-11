@@ -68,37 +68,19 @@
     margin: 0 auto;
   }
 
-  .banner {
-    background-image: url(./../img/banner.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    text-align: left;
-    background-position: center;
-    margin-top: 50px;
-    padding: 20px 20px 50px;
-    .banner_title {
-      margin:20px 0 55px;
-      a {
-        text-align: left;
-        text-decoration: none;
-        @include styleText($fs-1, $fw-thin, $color-black);
-        transition: all 0.3s;
-        &:hover {
-          text-decoration: underline;
-        }
-      }
+  .form-group.invalid {
+    [name] {
+      border-color: $color-red;
     }
-    h1 {
-      @include styleText($fs-4, $fw-semibold, $color-black);
-    }
-  }
-  
 
-  .register{
-    h2 {
-      text-transform: uppercase;
-      text-align: center;
-      margin: 20px auto;
-      @include styleText($fs-3, $fw-bold, $color-black);
+    .sp-info {
+      color: $color-red;
+    }
+
+    #btnClose {
+      a {
+        text-decoration: none;
+        color: black;
+      }
     }
   }

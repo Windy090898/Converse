@@ -13,8 +13,6 @@ function getProduct(callback) {
         .then(callback)
 }
 
-
-
 function renderDisplay(productList) {
     let html = ''
     productList.content.forEach(product => {

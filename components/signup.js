@@ -63,8 +63,9 @@ class Signup extends HTMLElement {
   customElements.define('signup-component', Signup);
 
   /**
+   * <button class="me-3" data-toggle="modal" data-target="#myModal">Sign Up</button>
    * <!-- The Modal -->
-<div class="modal show" id="myModal">
+<div class="modal fade" id="myModal">
  <div class="modal-dialog">
      <div class="modal-content " style=" border-radius:0">
          <header class="head-form mb-0">
