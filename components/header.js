@@ -27,10 +27,30 @@ headerTemplate.innerHTML = `
         <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
             <div class="navbar-nav"></div>
             <div class="account_item d-flex">
-                <a href="./register.html" class="me-3 signUp">Sign Up</a>
-                <a href="./register.html" class="me-3" ><i
-                        class="fa-solid fa-user-large"></i></a>
+                <div class="user_register">
+                    <a href="./register.html" class="signUp">Sign Up</a>
+                    <a href="./signin.html" class="signIn">Sign In</a>
+                </div>
+                <span class="username" style="display:none"></span>
+                <div class="navbar_user" style="display:none">
+                    <a href="#"><i class="fa-solid fa-user-large"></i></a>
+                    <ul class="navbar_user-menu">
+                        <li class="navbar_user-item">
+                            <a href="">My Account</a>
+                        </li>
+                        <li class="navbar_user-item">
+                            <a href="">My Orders</a>
+                        </li>
+                        <li class="navbar_user-item signOut">
+                            <a href="">Sign Out</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="user_cart">
                 <a href="#"><i class="fa-solid fa-cart-shopping"></i></i></a>
+                </div>
+                
+                
             </div>
             <div class="account_search">
                 <ul class="navbar-nav box">
@@ -106,9 +126,19 @@ renderUser()
 
 function renderUser() {
     var user = JSON.parse(localStorage.getItem('userSignup'));
+    var username = shadowRoot.querySelector('.username')
+    var userIcon = shadowRoot.querySelector('.navbar_user')
     if (user) {
-        var headerUser = shadowRoot.querySelector('.signUp')
-        headerUser.innerHTML = user.name
+        // Hide singup button and replace with user name, icon user with user infor menu
+        shadowRoot.querySelector('.user_register').style.display = 'none';
+        username.innerHTML = user.email
+        username.style.display = 'inline-block';
+        userIcon.style.display = 'inline-block';
+    }
+
+    // When user click signout button then remove storage, remove user name and user icon, show signup button
+    shadowRoot.querySelector('.signOut').onclick = function() {
+        localStorage.removeItem('userSignup');
     }
 }
 

@@ -36,12 +36,7 @@
             <header class="head-form mb-0">
                 <h2 id="header-title" class="py-2 ps-4"
                     style="font-size:larger ; text-decoration: underline;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
-                    Sign up</h2>
-   
-                <h3 id="header-title" class="py-1 ps-4"
-                    style="font-size:large; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
-                    Almost there.</h3>
-   
+                    Sign in</h2>   
             </header>
    
             <!-- Modal body -->
@@ -59,44 +54,7 @@
    
                         <span class="sp-info" id="notifyEmail"></span>
                     </div>
-                    <!-- name -->
-                    <div class="form-group">
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fa fa-address-book"></i></span>
-                            </div>
-                            <input type="name" name="name" rule="required|name" id="name" class="form-control input-sm"
-                                placeholder="Name">
-                        </div>
-                        <span class="sp-info" id="notifyName"></span>
-                    </div>
-                    <!-- number phone -->
-                    <div class="form-group">
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fa-solid fa-phone"></i></span>
-                            </div>
-                            <input type="phone" name="phone" rule="required|number" id="phone" class="form-control input-sm"
-                                placeholder="Number phone">
-                        </div>
-                        <span class="sp-info" id="notifyNumberPhone"></span>
-                    </div>
-                    <!-- GENDER  -->
-                    <div class="form-group">
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fa-solid fa-transgender"></i></span>
-                            </div>
-                            <select class="form-control" name="chucvu" rule="required" id="chucvu">
-                                <option value="" selected disabled>Gender</option>
-                                <option value="Male">Male</option>
-                                <option value="Female">Female</option>
-                                <option value="Do not specify">Do not specify</option>
-                            </select>
-                        </div>
-   
-                        <span class="sp-info" id="notifyGender"></span>
-                    </div>
+
                     <!-- PASSWORD  -->
                     <div class="form-group">
                         <div class="input-group">
@@ -106,44 +64,19 @@
                             <input type="password" name="password" rule="required|password" id="password" class="form-control input-sm"
                                 placeholder="Password">
                         </div>
-                        <div class="screen">
-                            <p class=" font-italic"
-                                style="font-size: 12px; font-weight: 200; padding:10px 0 10px 20px ;">8 characters
-                                minimum
-                                <br>One number
-                                <br>At least 1 special character(s) - [$%/(){}=?!.,-_*+~#]
-                                <br>One lowercase character
-                                <br>One uppercase character
-                            </p>
-                        </div>
                         <span class="sp-info" id="notifyPassWord"></span>
-                    </div>
-                    <!-- CONFIRM PASSWORD  -->
-                    <div class="form-group">
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fa fa-key"></i></span>
-                            </div>
-                            <input type="password" name="confirmedPassword" rule="required|confirmed:#password" id="confirmedPassword" class="form-control input-sm"
-                                placeholder="Confirm password">
-                        </div>
-                        <span class="sp-info" id="notifyConfirm"></span>
                     </div>
                     
                             <!-- Modal footer -->
                     <div class="modal-footer align-items-center text-center" id="modal-footer">
                         <!-- <button id="btnAddMember" type="button" class="form-submit btn btn-outline-dark"
                             style="border-radius: 0; padding: 5px 40px;">Sign Up</button> -->
-                            <input type="submit" value="Sign Up" class="btn btn-outline-dark">
+                            <input type="submit" value="Sign In" class="btn btn-outline-dark">
                     <button id="btnClose" type="button" class="btn btn-outline-danger"
                     data-dismiss="modal">Close</button>
                     </div>
    
                 </form>
-
-                <div class="logIn" >You already have account?
-                    <a href="./signin.html">Sign in</a>
-                </div>
             </div>
             
         </div>
@@ -169,7 +102,7 @@
     <script>
         Validator('#signupForm', {
           onSubmit: function(user) {
-            var userAPI = 'https://shop.cyberlearn.vn/api/Users/signup';
+            var signInAPI = 'https://shop.cyberlearn.vn/api/Users/signin';
             createUser(user)
             localStorage.setItem('userSignup', JSON.stringify(user));
             window.location.href = './index.html'
@@ -182,7 +115,7 @@
                     },
                     body: JSON.stringify(user), // body user type must match "Content-Type" header
                 }
-                fetch(userAPI, options)
+                fetch(signInAPI, options)
                     .then((response) => response.json())
                     .then((user) => console.log(user))
             }

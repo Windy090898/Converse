@@ -43,7 +43,7 @@ function Validator(formSelector, options) {
         },
         password: function (value) {
             var regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$@!%&*?])[A-Za-z\d#$@!%&*?]{8,}$/
-            return regex.test(value) ? undefined : "Input password with the specified criteria"
+            return regex.test(value) ? undefined : "Input correct password"
         }
     }
 

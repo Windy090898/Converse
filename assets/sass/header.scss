@@ -133,18 +133,95 @@ header {
         }
       }
       .account_item {
-      // padding-top: 16px;
+        @include styleText($fs-1, $fw-medium, $color-black);
+        display: flex;
+        gap: 16px;
+        align-items: center;
+
         a {
-          // padding-top: 12px;
-          margin-right: $fs-1;
           text-decoration: none;
           @include styleText($fs-1, $fw-medium, $color-black);
-          transition: all 0.5s;
           &:hover {
             text-decoration: underline;
             color: $color-red;
           }
         }
+
+        .user_register {
+          .signUp {
+            padding-right: 8px;
+            border-right: 1px solid $color-black;
+          }
+          .signIn {
+            padding-left: 6px;
+          }
+        }
+
+        .navbar_user {
+          position: relative;
+          cursor: pointer;
+
+          .navbar_user-menu {
+            min-width: 150px;
+            position: absolute;
+            top: 35px;
+            right: -250%;
+            list-style: none;
+            padding-left: 0;
+            background-color: $color-lowpink;
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+            display: none;
+  
+            // Triangle top
+            &::before {
+              content: "";
+              z-index: 20000;
+              position: absolute;
+              top: -15px;
+              right: 15px;
+              border-left: 20px solid transparent;
+              border-right: 20px solid transparent;
+              border-bottom: 15px solid $color-lowpink;
+            }
+  
+            // Bridge for hover
+            &::after {
+              content: "";
+              position: absolute;
+              top: -30px;
+              left: 0;
+              right: 0;   
+              height: 30px;
+              display: block;
+              background-color: transparent;
+            }
+  
+            li {
+              padding: 15px 20px;
+  
+              a {
+                text-decoration: none;
+                width: 100%;
+                display: inline-block;
+              }
+  
+              &:hover {
+                background-color: $color-footer;
+                cursor: pointer;
+              }
+            }
+          }
+          
+          &:hover {
+            .navbar_user-menu {
+              display: block;
+            }
+          }
+
+        }
+        
+        
+        
       }
       .account_search {
         .navbar-nav {

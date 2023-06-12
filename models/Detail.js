@@ -24,8 +24,6 @@ function renderCateList(item) {
     return catHtml;
 }
 
-
-
 function renderDisplay(productList) {
         var selectedProduct = productList.content.find(product => product.id == id)
         var sizeHtml = "";
@@ -112,4 +110,12 @@ function handleRelatedProduct(productList) {
     })
     
     document.querySelector('.rec_list').innerHTML = relatedHtml;
+}
+
+// function addToCart()
+
+document.getElementById('size_options').onchange = function(e) {
+    var addtoCartBtn = document.querySelector('.cart')
+    addtoCartBtn.disabled = false;
+    addtoCartBtn.classList.add('active');
 }

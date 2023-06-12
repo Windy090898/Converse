@@ -348,12 +348,19 @@
 }
 .detail .detail_product .product_buy_like .cart_like .cart {
   flex: 1;
-  padding: 15px;
+  padding: 15.5px;
   border: #ffffff;
   text-align: start;
   font-size: 14px;
   font-weight: 700;
   color: #ababab;
+  cursor: not-allowed;
+  border: 1px solid #ffffff;
+}
+.detail .detail_product .product_buy_like .cart_like .cart.active {
+  background-color: #000b15;
+  color: #ffffff;
+  cursor: pointer;
 }
 .detail .detail_product .product_buy_like .cart_like .product_like {
   padding: 18px;
@@ -411,6 +418,7 @@
   font-weight: 400;
   color: #000b15;
   text-decoration: underline;
+  cursor: pointer;
 }
 .detail::after {
   content: "";
@@ -483,6 +491,15 @@
 }
 .other_rec .rec_list .rec_item .rec_text .category ul {
   padding-left: 0;
+}
+
+.modal .logIn {
+  text-align: center;
+}
+.modal .logIn a {
+  font-size: 14px;
+  font-weight: 700;
+  color: black;
 }
 
 @media screen and (min-width: 740px) and (max-width: 1023px) {

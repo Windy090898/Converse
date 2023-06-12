@@ -84,3 +84,10 @@
       }
     }
   }
+
+  .logIn {
+    text-align: center;
+    a {
+      @include styleText($fs-1, $fw-bold, $color-black)
+    }
+  }

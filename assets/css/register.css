@@ -23,4 +23,13 @@ img {
 .form-group.invalid #btnClose a {
   text-decoration: none;
   color: black;
+}
+
+.logIn {
+  text-align: center;
+}
+.logIn a {
+  font-size: 16px;
+  font-weight: 700;
+  color: black;
 }/*# sourceMappingURL=register.css.map */

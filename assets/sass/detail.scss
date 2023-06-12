@@ -433,10 +433,18 @@ $rec-item-gap: 80px;
 
                 .cart {
                     flex: 1;
-                    padding: 15px;
+                    padding: 15.5px;
                     border: $color-white;
                     text-align: start;
-                    @include styleText($fs-2, $fw-bold, $color-secondary)
+                    @include styleText($fs-2, $fw-bold, $color-secondary);
+                    cursor: not-allowed;
+                    border: 1px solid $color-white;
+
+                    &.active {
+                      background-color: #000b15;
+                      color: $color-white;
+                      cursor: pointer;
+                    }
                 }
 
                 .product_like {
@@ -508,6 +516,7 @@ $rec-item-gap: 80px;
             a {
                 @include styleText($fs-1, $fw-normal, $color-primary);
                 text-decoration: underline;
+                cursor: pointer;
             }
         }
 
@@ -590,6 +599,15 @@ $rec-item-gap: 80px;
 
 }
 
+
+.modal {
+  .logIn {
+    text-align: center;
+    a {
+      @include styleText($fs-2, $fw-bold, $color-black)
+    }
+  }
+}
 // Tablet
 @media screen and (min-width: 740px) and (max-width: 1023px) {
   .detail {
